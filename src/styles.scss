@@ -1,0 +1,14 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import '~src/scss/_variables.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.error-bar {
+  padding: 20px;
+  background-color: red;
+  color: $secondary-text-color;
+  .mat-button {
+    color: $secondary-text-color;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="product-container">
+  <img class="product-image" [src]="productDetails?.image" alt="" />
+  <div class="product-description">
+    <p class="description-category">
+      Category <span class="description-category-pointer">></span>
+      {{ productDetails?.category }}
+    </p>
+    <p class="description-title">{{ productDetails?.title }}</p>
+    <p class="description-price">
+      {{ productDetails?.price | currency: "RM":"symbol":"1.0-0" }}
+    </p>
+    <div class="review-container">
+      <div class="rating-container">
+        <div class="rating-cover"></div>
+        <div [style.width]="rating" class="rating-content"></div>
+      </div>
+      <p class="rating-number">{{ productDetails?.rating?.rate }} / 5 Rating</p>
+      <p class="reviews-count">{{ productDetails?.rating?.count }} Reviews</p>
+    </div>
+    <p>{{ productDetails?.description }}</p>
+  </div>
+</div>

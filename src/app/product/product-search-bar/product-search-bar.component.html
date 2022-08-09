@@ -1,0 +1,18 @@
+<div class="search-box mt-4">
+  <mat-form-field appearance="fill">
+    <mat-label>Category</mat-label>
+    <mat-select
+      [(ngModel)]="categorySelected"
+      (selectionChange)="categoryOnChange()"
+      placeholder="Search by category"
+    >
+      <mat-option value="all">All</mat-option>
+      <mat-option
+        *ngFor="let category of $categoryObserv | async"
+        [value]="category"
+      >
+        {{ category | titlecase }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
